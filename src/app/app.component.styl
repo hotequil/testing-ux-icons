@@ -1,0 +1,106 @@
+@import "src/variables.styl"
+@import "src/mixins.styl"
+@import "src/animations.styl"
+
+.app
+    width 100%
+    display flex
+    align-items center
+    flex-direction column
+    padding space
+    box-sizing border-box
+
+    border = dflt solid black
+
+    &__container
+        display flex
+        align-items center
+        flex-direction column
+
+    &__title
+        font-weight 600
+        font-size 2rem
+        margin-bottom .5rem
+
+    &__subject
+        color grey
+        margin-bottom space
+
+    &__actions
+        display grid
+        grid-gap space * 8
+        grid-template-columns repeat(2, 1fr)
+        margin-top: space * 6;
+
+
+    &__txt
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        display flex
+        align-items center
+        justify-content center
+        text-align center
+        width 100%
+        height 100%
+        background-color rgba(black, .87)
+        z-index 2
+        padding space
+        box-sizing border-box
+
+        &--error
+            background-color black
+
+        &-size
+            max-width 1000px
+            color white
+            font-size 2rem
+            line-height 1.25
+
+    &__action
+        display flex
+        align-items center
+        justify-content center
+        flex-direction column
+        transition transform .25s
+
+        &--hover
+            animation rotate infinite .5s alternate
+
+        &-txt
+            font-size 1.2rem
+            color black
+            margin-top 1rem;
+
+        &-img
+            size = 175px
+
+            width size
+            height size
+
+    &__img
+        width 200px
+        padding 0 space;
+        animation zoom infinite 1s alternate
+        cursor pointer
+        position relative
+        z-index 1
+
+        &:hover, &:active
+            animation none
+
+        &:hover
+            shadow-img(3)
+
+        &:active
+            shadow-img(4)
+
+
+
+
+
+
+
+
+

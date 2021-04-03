@@ -1,0 +1,25 @@
+@import "mixins.styl"
+
+@keyframes zoom {
+    from {
+        shadow-img()
+    }
+
+    to {
+        shadow-img(2)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform rotateZ(0deg)
+    }
+
+    50%{
+        transform rotateZ(-15deg)
+    }
+
+    100% {
+        transform rotateZ(15deg)
+    }
+}
